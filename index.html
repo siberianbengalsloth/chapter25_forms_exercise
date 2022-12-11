@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rocket Simulation</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 7px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form id="rocketSimulation" action="https://handlers.education.launchcode.org/request-parrot" method="post">
+
+        <label for="testName">Test Name <input type="text" name="testName" id="testName"></label><br>
+        <label for="testDate">Test Date <input type="date" name="testDate" id="testDate"></label><br>
+        <label for="rocketType">Rocket Type <select name="rocketType" id="rocketType">
+                <option value="">Choose from the list</option>
+                <option value="1">Brant</option>
+                <option value="2">Lynx</option>
+                <option value="3">Orion</option>
+                <option value="4">Terrier</option>
+            </select></label><br>
+        <label for="boosterCount">Number of Rocket Boosters <input type="number" name="boosterCount" id="boosterCount"
+                min="1" max="10"></label>
+        <label for="windRating">Wind Rating <br>
+            No Wind<input type="radio" name="windRating" id="noWind" value="0">
+            Mild <input type="radio" name="windRating" id="mild" value="10" checked>
+            Strong <input type="radio" name="windRating" id="strong" value="20"></label>
+        <label for="productionServers">Use production grade servers <input type="checkbox" name="productionServers"
+                id="productionServers"></label>
+        <input type="submit" value="Run Simulation">
+    </form>
+</body>
+
+</html>
